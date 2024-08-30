@@ -1,0 +1,88 @@
+<<<<<<< HEAD
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid2";
+import Lottie from "react-lottie-player";
+import lottiejson from '/public/mainpage.json'
+import style from './mainpage.module.css'
+import { useRouter } from "next/router";
+
+export default function Mainpage() {
+    const router = useRouter();
+    const handleClick = () => {
+        router.push('/about-me')
+    }
+    return (
+      <>
+         <Grid container spacing={3}>
+           <Grid size={4}>
+            <div className={style.introduce}>
+                <h2 style={{fontSize:'45px'}}>안녕하세요!!</h2>
+                <p>
+                안녕하세요,
+
+                저는 충주상업고등학교 스마트 IT과를 졸업한 김정식입니다. 제 꿈은 부사관으로서 군에서 중요한 역할을 수행하는 것입니다. 이를 위해 다양한 기술과 자격증을 준비해왔습니다.
+
+                저는 컴퓨터 활용 능력 필기 자격증과 KPC 자격증을 보유하고 있으며, 이로 인해 정보 기술 및 관리에 대한 탄탄한 기초를 갖추게 되었습니다. 스마트 IT과에서의 학습과 경험은 문제 해결 능력과 팀워크를 배양하는 데 큰 도움이 되었습니다.
+
+                부사관으로서의 꿈을 실현하기 위해, 저의 기술적 역량과 헌신적인 자세를 바탕으로 군에서 효과적으로 기여하고 싶습니다. 감사합니다.
+                </p>
+                <Button variant="contained" onClick={handleClick}>프로젝트 보러가기</Button>
+            </div>
+         </Grid>
+         <Grid size={8}>
+            <div>
+                <Lottie
+                    loop
+                    animationData={lottiejson}
+                    play
+                />
+            </div>
+         </Grid>
+        </Grid>
+      </>
+    );
+=======
+import Button from '@mui/material/Button';
+import Grid from "@mui/material/Grid2";
+import Lottie from "react-lottie-player";
+import lottiejson from '/public/mainpage.json'
+import styles from './mainpage.module.css'
+import { useRouter } from 'next/router';
+
+export default function Mainpage(){
+    const router = useRouter();
+    const handleClick = () => {
+        router.push('/about-me');
+    };
+    return(
+        <>
+            
+            <Grid container spacing={10}>
+                <Grid size={4}>
+                    <div className={styles.introduce}>
+                        <h2 style={{fontSize:35}}>안녕하세요</h2>
+                        <p>
+                            제 이름은 장병준입니다. 현재 충주 상업고등학교에 재학 중이며, 
+                            미래에 개발자가 되는 것을 목표로 하고 있습니다.
+                            어렸을 때부터 기술과 프로그래밍에 관심이 있었고, 이를 바탕으로 다양한 프로젝트와 게임 제작을 경험해 왔습니다. 
+                            특히 게임 개발에 흥미를 느끼고 있으며, 이를 통해 창의성과 게임개발 능력을 키우고 있습니다.
+                            저는 항상 목표를 향해 끊임없이 노력하며, 새로운 것들을 배우고 성장하는 것을 중요하게 생각합니다. 
+                            앞으로도 개발자로서 지속적으로 역량을 키우기 위해 노력할 것입니다.
+                        </p>
+                        <Button variant="contained" onClick={handleClick}>프로젝트 보러가기</Button>
+                    </div>
+                </Grid>
+                <Grid size={7}>
+                    <div>
+                        <Lottie
+                            loop
+                            animationData={lottiejson}
+                            play
+                        />
+                    </div>
+                </Grid>
+            </Grid>
+        </>
+    )
+>>>>>>> 253e6d00c75adb2957d61248bc3afcf75c728236
+}
