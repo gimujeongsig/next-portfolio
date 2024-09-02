@@ -7,7 +7,7 @@ export default function Header(){
         <div className={styles.header}>
             <nav className={styles.navbar}>
                 <Link href='/' className={styles.nav_logo}>
-                    <Image src='/Logo.png' width={80} height={64}></Image>
+                    <Image src='/logo.jpg' width={80} height={64}></Image>
                     <span>portfolio</span>
                 </Link>
                 
