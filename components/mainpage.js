@@ -8,13 +8,13 @@ import { useRouter } from 'next/router';
 export default function Mainpage(){
     const router = useRouter();
     const handleClick = () => {
-        router.push('/about-me');
+        router.push('/projects');
     };
     return(
         <>
             
             <Grid container spacing={10}>
-                <Grid size={4}>
+                <Grid size={5}>
                     <div className={styles.introduce}>
                         <h2 style={{fontSize:35}}>안녕하세요</h2>
                         <p>
