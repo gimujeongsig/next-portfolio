@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 
+import styles from './project-item.module.css'
+
 export default function ProjectItem({data}) {
     const title = data.properties.이름.title[0]?.plain_text;
     const tags = data.properties.태그.multi_select;
@@ -15,6 +17,8 @@ export default function ProjectItem({data}) {
     const github = data.properties?.GitHub.url;
     const imgSrc = data.cover.external.url;
     const demo = data.properties?.Demo.url;
+    const imgUrl = data.properties?.image.url;
+    
     const router = useRouter();
 
     function countWorkDays(start,end) {
@@ -33,10 +37,10 @@ export default function ProjectItem({data}) {
 
     const workDay = countWorkDays(start,end);   
     return (
-            <Card sx={{width: 345}}>
+            <Card className={styles.cardItem} sx={{ width : 320, display: "flex", flexDirection: "column", justifyContent: "space-between"}}> 
                 <CardMedia
                     sx={{height : 300}}
-                    image={imgSrc}
+                    image={imgUrl}
                     title={title}
                 />
                 <CardContent>
